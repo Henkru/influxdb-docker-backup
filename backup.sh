@@ -16,4 +16,4 @@ backup
 find /post.d -type f -exec sh "{}" ";"
 
 # Delete the snapshot
-rm -rf /backup
+[ -z ${DISABLE_DEFAULT_BACKUP+x} ] && rm -rf /backup/influxdb
